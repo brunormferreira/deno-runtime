@@ -12,9 +12,15 @@ Go by link to [Deno](https://deno.land/) documentation.
 $ deno run 'file-name'
 ```
 
+## Formatting Code
+
+```bash
+$ deno fmt 'file-name'
+```
+
 ## Flags
 
-- `--allow-all` (Allow all permissions) - `Don't use it`.
+- `--allow-all` (Allow all permissions (same as -A)) - `Don't use it`.
 - `--allow-read` (Allow file system read access).
 - `--allow-write` (Allow file system write access).
 - `--allow-plugin` (Allow loading plugins).
