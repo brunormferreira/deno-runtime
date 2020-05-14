@@ -6,6 +6,8 @@ Go by link to [Deno](https://deno.land/) documentation.
 
 - Not compatible with Node (NPM) packages.
 
+- Good article from [FreeCodeCamp](https://www.freecodecamp.org/news/the-deno-handbook/).
+
 ## Running Deno file
 
 ```bash
