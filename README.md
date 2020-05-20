@@ -1,5 +1,9 @@
 ## Read the documentation to install
 
+<p align="center">
+  <img src="https://miro.medium.com/max/1000/1*jPBtd4GQBjJ0KcyFyqcpBg.png" width="300">
+</p>
+
 Go by link to [Deno](https://deno.land/) documentation.
 
 - You can run both TypeScript (.ts) files, or JavaScript (.js) files.
@@ -32,8 +36,8 @@ $ deno fmt 'file-name'
 
 ## Denon
 
-- On command line, do the following command to [Denon](https://github.com/eliassjogreen/denon) watch file changes.
+- On command line, do the following command inside a folder to [Denon](https://github.com/eliassjogreen/denon) watch file changes.
 
 ```bash
-$ denon -c .denon server.ts
+$ denon -c .denon 'file-name'
 ```
