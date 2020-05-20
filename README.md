@@ -29,3 +29,11 @@ $ deno fmt 'file-name'
 - `--allow-net` (Allow network access).
 - `--allow-env` (Allow environment access).
 - `--allow-run` (Allow running subprocesses).
+
+## Denon
+
+- On command line, do the following command to Denon watch file changes.
+
+```bash
+$ denon -c .denon server.ts
+```
