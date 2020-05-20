@@ -32,7 +32,7 @@ $ deno fmt 'file-name'
 
 ## Denon
 
-- On command line, do the following command to Denon watch file changes.
+- On command line, do the following command to [Denon](https://github.com/eliassjogreen/denon) watch file changes.
 
 ```bash
 $ denon -c .denon server.ts
