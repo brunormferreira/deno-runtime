@@ -77,14 +77,43 @@ const addProduct = async ({ request, response }: any) => {
 
 // @desc    Update product
 // @route   PUT /api/v1/products
-const updateProduct = ({ response }: any) => {
-  response.body = 'update'
+const updateProduct = async ({ params, request, response }: any) => {
+  const product: Product | undefined = products.find(p => p.id === params.id)
+
+  if (product) {
+    const body = await request.body()
+
+    const updateData: { 
+      name?: string
+      description?: string
+      price?: number 
+    } = body.value
+
+    products = products.map(p => p.id === params.id ? { ...p, ...updateData } : p)
+
+    response.status = 200
+    response.body = {
+      success: true,
+      data: products
+    }
+
+  } else {
+    response.status = 404
+    response.body = {
+      success: false,
+      message: 'No product found.'
+    }
+  }
 }
 
 // @desc    Delete product
 // @route   DELETE /api/v1/products/:id
-const deleteProduct = ({ response }: any) => {
-  response.body = 'delete'
+const deleteProduct = ({ params, response }: any) => {
+  products = products.filter(p => p.id !== params.id)
+  response.body = {
+    success: true,
+    message: 'Product removed.'
+  }
 }
 
 export { 
